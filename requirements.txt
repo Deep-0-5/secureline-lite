@@ -1,0 +1,7 @@
+numpy
+scipy
+scikit-learn
+faster-whisper
+pyttsx3
+google-genai
+pytest

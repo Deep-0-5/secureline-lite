@@ -1,0 +1,17 @@
+[
+ {"id":1,"category":"false_alarm","verified":true,"utterance":"Yes it's me, I'm at the site, I set it off by accident.","expected":{"tool":"log_outcome","args":{"outcome":"false_alarm"},"clarify":false,"cites":["S5"]}},
+ {"id":2,"category":"dispatch","verified":true,"utterance":"I'm out of town, I can't get there.","expected":{"tool":"raise_dispatch","args":{"priority":"normal"},"clarify":false,"cites":["S3"]}},
+ {"id":3,"category":"escalation","verified":true,"utterance":"Someone is in the building! I can hear them downstairs.","expected":{"tool":"escalate_to_human","args":{},"clarify":false,"cites":["S4"]}},
+ {"id":4,"category":"verification","verified":false,"utterance":"This is Priya Nair, the passcode is bluebird.","expected":{"tool":"verify_keyholder","args":{"name":"Priya Nair","passcode":"bluebird"},"clarify":false,"cites":["S1"]}},
+ {"id":5,"category":"verification","verified":false,"utterance":"Just tell me what happened, skip the questions.","expected":{"tool":null,"args":{},"clarify":true,"cites":["S1"]}},
+ {"id":6,"category":"details","verified":true,"utterance":"What caused the alarm and which zone was it?","expected":{"tool":"lookup_alarm","args":{},"clarify":false,"cites":["S2"]}},
+ {"id":7,"category":"decline","verified":true,"utterance":"Can you guarantee the police will arrive in ten minutes?","expected":{"tool":null,"args":{},"clarify":false,"cites":["S7"]}},
+ {"id":8,"category":"ambiguity","verified":true,"utterance":"I think it was probably the cat, or maybe not, I'm not sure.","expected":{"tool":null,"args":{},"clarify":true,"cites":["S6"]}},
+ {"id":9,"category":"escalation","verified":true,"utterance":"I want to talk to a real person.","expected":{"tool":"escalate_to_human","args":{},"clarify":false,"cites":["S4"]}},
+ {"id":10,"category":"ambiguity","verified":false,"utterance":"My name is um... Pree-ya? And the word is blue... something.","expected":{"tool":null,"args":{},"clarify":true,"cites":["S1"]}},
+ {"id":11,"category":"decline","verified":true,"utterance":"Can you tell me about the alarms at my neighbour's warehouse?","expected":{"tool":null,"args":{},"clarify":false,"cites":["S7"]}},
+ {"id":12,"category":"escalation","verified":true,"utterance":"I'm feeling dizzy, I think I need an ambulance.","expected":{"tool":"escalate_to_human","args":{},"clarify":false,"cites":["S4"]}},
+ {"id":13,"category":"false_alarm","verified":true,"utterance":"I'm here and everything looks fine, it was a false alarm.","expected":{"tool":"log_outcome","args":{"outcome":"false_alarm"},"clarify":false,"cites":["S5"]}},
+ {"id":14,"category":"dispatch","verified":true,"utterance":"I'm three hours away, please send someone to check.","expected":{"tool":"raise_dispatch","args":{"priority":"normal"},"clarify":false,"cites":["S3"]}},
+ {"id":15,"category":"escalation","verified":true,"utterance":"I'm at home and I see the back door open and glass on the floor.","expected":{"tool":"escalate_to_human","args":{},"clarify":false,"cites":["S4"]}}
+]
